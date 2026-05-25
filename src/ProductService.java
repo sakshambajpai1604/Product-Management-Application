@@ -37,4 +37,16 @@ public class ProductService {
         return prods;
 
     }
+
+    public List<Product> getProductByPlace(String place) {
+        List<Product> prods = new ArrayList<>();
+
+        for (Product p : products) {
+            if (p.getPlace() != null && p.getPlace().equalsIgnoreCase(place)) {
+                prods.add(p);
+            }
+        }
+
+        return prods;
+    }
 }

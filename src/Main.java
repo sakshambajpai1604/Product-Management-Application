@@ -37,9 +37,9 @@ public class Main {
 //        System.out.println(p);
 
         System.out.println("==============================================");
-        System.out.println("a Particular text");
+        System.out.println("Products in a particular place");
 
-        List<Product> prods = service.getProductWithText("black");
+        List<Product> prods = service.getProductByPlace("Black Glass Shelf");
 
         for(Product product: prods) {
             System.out.println(product);
