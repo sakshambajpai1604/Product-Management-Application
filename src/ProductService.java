@@ -49,4 +49,16 @@ public class ProductService {
 
         return prods;
     }
+
+    public List<Product> getProductsOutOfWarranty(int currentYear) {
+        List<Product> prods = new ArrayList<>();
+
+        for (Product p : products) {
+            if (p.getWarrenty() < currentYear) {
+                prods.add(p);
+            }
+        }
+
+        return prods;
+    }
 }

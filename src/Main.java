@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -37,9 +38,10 @@ public class Main {
 //        System.out.println(p);
 
         System.out.println("==============================================");
-        System.out.println("Products in a particular place");
+        System.out.println("Products out of warranty");
 
-        List<Product> prods = service.getProductByPlace("Black Glass Shelf");
+        int currentYear = LocalDate.now().getYear();
+        List<Product> prods = service.getProductsOutOfWarranty(currentYear);
 
         for(Product product: prods) {
             System.out.println(product);
